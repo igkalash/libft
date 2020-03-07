@@ -6,7 +6,7 @@
 #    By: igkalash <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/25 19:34:58 by igkalash          #+#    #+#              #
-#    Updated: 2020/03/06 12:15:38 by igkalash         ###   ########.fr        #
+#    Updated: 2020/03/06 17:48:50 by igkalash         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,8 +40,8 @@ SRC =   ft_bzero.c   ft_isascii.c ft_memccpy.c ft_memcpy.c  ft_strcat.c \
 INC = ./
 all: $(NAME)
 $(NAME): $(OBJ)
+	gcc -Wall -Wextra -Werror -c $(SRC)
 	ar rc $(NAME) $(OBJ)
-	ranlib $(NAME)
 clean:
 	/bin/rm -f $(OBJ)
 fclean: clean
